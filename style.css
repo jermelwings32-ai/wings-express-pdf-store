@@ -1062,3 +1062,43 @@ section {
 .feature-card:nth-child(6) {
     animation-delay: 0.3s;
 }
+
+/* ─── Ad Container Styles ────────────────────────────────── */
+.ad-container {
+    padding: 24px 0;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    overflow: hidden;
+}
+
+.ad-container .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.ad-container ins {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+#ad-hero {
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+#ad-mid {
+    background: var(--bg-primary);
+    padding: 32px 0;
+}
+
+#ad-footer {
+    background: linear-gradient(180deg, var(--bg-primary) 0%, #08080f 100%);
+    padding: 32px 0;
+}
+
+@media (max-width: 768px) {
+    .ad-container {
+        padding: 16px 0;
+    }
+}

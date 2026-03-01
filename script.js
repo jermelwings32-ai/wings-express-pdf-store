@@ -76,32 +76,28 @@ if (yearEl) {
     yearEl.textContent = yearEl.textContent.replace('2026', new Date().getFullYear());
 }
 
-// ─── Payhip Integration ─────────────────────────────────────
-// Map product slugs to Payhip checkout URLs
-// UPDATE THESE with real Payhip product links once products are listed
-const PAYHIP_PRODUCTS = {
-    'ai-money-machine': '',       // e.g. 'https://payhip.com/b/xxxxx'
-    'affiliate-marketing': '',    // e.g. 'https://payhip.com/b/yyyyy'
-    'digital-products': '',       // e.g. 'https://payhip.com/b/zzzzz'
-    'complete-bundle': ''         // e.g. 'https://payhip.com/b/bbbbb'
+// ─── Stripe Payment Integration ─────────────────────────────
+const STRIPE_PRODUCTS = {
+    'ai-money-machine': 'https://buy.stripe.com/test_5kQ28tcfS2Qv25z8kF1Nu00',
+    'affiliate-marketing': 'https://buy.stripe.com/test_9B614pcfS76LaC5asN1Nu01',
+    'digital-products': 'https://buy.stripe.com/test_8x2cN7djWbn125z8kF1Nu02',
+    'complete-bundle': 'https://buy.stripe.com/test_3cIcN74Nq4YDdOh44p1Nu03'
 };
 
-// Handle buy button clicks
+// Handle buy button clicks — open Stripe Checkout
 document.querySelectorAll('.payhip-buy-btn').forEach(btn => {
     btn.addEventListener('click', function (e) {
         e.preventDefault();
         const productSlug = this.dataset.product;
-        const payhipUrl = PAYHIP_PRODUCTS[productSlug];
+        const checkoutUrl = STRIPE_PRODUCTS[productSlug];
 
-        if (payhipUrl) {
-            // Open Payhip checkout
-            window.open(payhipUrl, '_blank');
+        if (checkoutUrl) {
+            window.location.href = checkoutUrl;
         } else {
-            // Fallback — scroll to bundle or show coming soon
-            alert('🚀 Store launching soon! Products will be available for purchase shortly.');
+            alert('🚀 Store launching soon! This product will be available shortly.');
         }
     });
 });
 
 console.log('Wings Express LLC — Website loaded');
-console.log('Payhip integration ready — update PAYHIP_PRODUCTS with real URLs');
+console.log('Stripe Checkout integration active');
