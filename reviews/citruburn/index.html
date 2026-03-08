@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitrusBurn™ — The #1 Natural Fat Burner (Special Offer Inside)</title>
+    <meta name="description" content="Discover how CitrusBurn is helping thousands of people lose weight naturally with its citrus-based formula. Limited time offer with 60-day money back guarantee.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0f;
+            color: #e8e8e8;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated gradient background */
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse 600px 400px at 20% 30%, rgba(255,165,0,0.08), transparent),
+                radial-gradient(ellipse 500px 300px at 80% 70%, rgba(255,69,0,0.06), transparent);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Urgency bar */
+        .urgency-bar {
+            background: linear-gradient(135deg, #ff4500, #ff6347);
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            color: white;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        .urgency-bar span { 
+            font-weight: 800;
+            text-decoration: underline;
+        }
+
+        /* Hero */
+        .hero {
+            margin-top: 70px;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,165,0,0.15);
+            border: 1px solid rgba(255,165,0,0.3);
+            color: #ffa500;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ffffff, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #999;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .subtitle strong { color: #ffa500; }
+
+        /* CTA button */
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6600, #ff4500);
+            color: white;
+            padding: 18px 48px;
+            font-size: 18px;
+            font-weight: 800;
+            border-radius: 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 30px rgba(255,69,0,0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(255,69,0,0.5);
+        }
+
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        .cta-note {
+            font-size: 13px;
+            color: #666;
+            margin-top: 12px;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 40px 0;
+        }
+
+        .stat {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 24px 16px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 900;
+            color: #ffa500;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #888;
+            margin-top: 4px;
+        }
+
+        /* Benefits */
+        .section {
+            margin: 50px 0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .benefit {
+            display: flex;
+            gap: 16px;
+            padding: 20px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit:hover {
+            background: rgba(255,165,0,0.05);
+            border-color: rgba(255,165,0,0.15);
+        }
+
+        .benefit-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .benefit h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .benefit p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.5;
+        }
+
+        /* Testimonials */
+        .testimonial {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #ccc;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 14px;
+            color: #ffa500;
+        }
+
+        .stars {
+            color: #ffd700;
+            margin-bottom: 8px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 20px 0;
+        }
+
+        .faq-q {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #ffa500;
+        }
+
+        .faq-a {
+            font-size: 14px;
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(180deg, transparent, rgba(255,69,0,0.05));
+            border-radius: 24px;
+            margin: 40px 0;
+        }
+
+        .guarantee {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(34,197,94,0.1);
+            border: 1px solid rgba(34,197,94,0.2);
+            color: #22c55e;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 11px;
+            color: #555;
+            line-height: 1.6;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 40px;
+        }
+
+        .countdown {
+            font-size: 32px;
+            font-weight: 900;
+            color: #ff4500;
+            margin: 15px 0;
+            font-variant-numeric: tabular-nums;
+        }
+
+        @media (max-width: 600px) {
+            .stats { grid-template-columns: 1fr; }
+            .container { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    
+    <div class="urgency-bar">
+        ⚡ LIMITED TIME: <span>Special pricing ending soon</span> — Only available through this page
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <div class="badge">🔬 Clinically Researched Formula</div>
+            <h1>The Citrus-Based Formula That's Helping Thousands Burn Fat Naturally</h1>
+            <p class="subtitle">
+                Discover how <strong>CitrusBurn™</strong> targets the root cause of slow metabolism 
+                using breakthrough citrus-based ingredients — no extreme diets, no intense exercise required.
+            </p>
+            
+            <a href="https://b30a09xp1m60xb72pe-nt-7nuw.hop.clickbank.net" 
+               class="cta-btn" id="main-cta">
+                👉 See The Special Offer Now
+            </a>
+            <p class="cta-note">✅ 60-Day Money Back Guarantee • Free Shipping Available</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number">190K+</span>
+                <span class="stat-label">Satisfied Customers</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">4.8/5</span>
+                <span class="stat-label">Average Rating</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">60 Day</span>
+                <span class="stat-label">Money-Back Guarantee</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Why CitrusBurn™ is Different</h2>
+            
+            <div class="benefit">
+                <div class="benefit-icon">🍊</div>
+                <div>
+                    <h3>Citrus-Based Formula</h3>
+                    <p>Uses natural citrus ingredients backed by research to support healthy fat metabolism.</p>
+                </div>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-icon">⚡</div>
+                <div>
+                    <h3>Targets Root Cause</h3>
+                    <p>Instead of suppressing appetite, it works with your body's natural metabolic processes.</p>
+                </div>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-icon">🛡️</div>
+                <div>
+                    <h3>Zero Risk To Try</h3>
+                    <p>Backed by a full 60-day money-back guarantee. If you're not satisfied, get a full refund.</p>
+                </div>
+            </div>
+            
+            <div class="benefit">
+                <div class="benefit-icon">💪</div>
+                <div>
+                    <h3>No Extreme Measures</h3>
+                    <p>No need for restrictive diets or grueling exercise. Just take it daily as directed.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">What People Are Saying</h2>
+            
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I was skeptical at first, but after 3 weeks I noticed my clothes fitting differently. I've tried everything before — this is the first time something actually felt different."</p>
+                <p class="testimonial-author">— Sarah M., Verified Buyer</p>
+            </div>
+            
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The fact that it comes with a 60-day guarantee made me feel comfortable trying it. I'm so glad I did. My energy levels are through the roof."</p>
+                <p class="testimonial-author">— James R., Verified Buyer</p>
+            </div>
+            
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I've recommended this to all my friends. Simple to take, no weird side effects, and I could see real changes within the first month."</p>
+                <p class="testimonial-author">— Michelle T., Verified Buyer</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <p class="faq-q">How does CitrusBurn work?</p>
+                <p class="faq-a">CitrusBurn uses a proprietary blend of citrus-based ingredients that have been shown to support healthy fat metabolism. It helps your body work more efficiently at burning stored fat.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-q">Is there a money-back guarantee?</p>
+                <p class="faq-a">Yes! CitrusBurn comes with a full 60-day, no-questions-asked money-back guarantee. If you're not completely satisfied, just contact their support team for a full refund.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-q">How long until I see results?</p>
+                <p class="faq-a">Results vary, but many customers report noticing changes within the first 2-4 weeks of consistent use. For best results, the manufacturer recommends using it for at least 3-6 months.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-q">Is this available in stores?</p>
+                <p class="faq-a">No. To ensure quality and prevent counterfeits, CitrusBurn is only available through their official website. Click the button above to visit the official site.</p>
+            </div>
+        </div>
+
+        <div class="final-cta">
+            <h2 style="font-size: 28px; margin-bottom: 10px;">Ready To Try It Risk-Free?</h2>
+            <p style="color: #999; margin-bottom: 20px;">Join 190,000+ satisfied customers</p>
+            
+            <div class="countdown" id="countdown">14:59</div>
+            <p style="color: #666; font-size: 13px; margin-bottom: 20px;">Special offer expires soon</p>
+            
+            <a href="https://b30a09xp1m60xb72pe-nt-7nuw.hop.clickbank.net" 
+               class="cta-btn">
+                🔥 Claim Your Special Discount Now
+            </a>
+            
+            <div class="guarantee">
+                🛡️ 60-Day Money Back Guarantee
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <p>DISCLAIMER: This page contains affiliate links. If you make a purchase through these links, 
+            I may earn a commission at no additional cost to you. Individual results may vary. 
+            This product is not intended to diagnose, treat, cure, or prevent any disease. 
+            Always consult your healthcare provider before starting any supplement.</p>
+            <p style="margin-top: 10px;">© 2026 Health Reviews Hub. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Countdown timer
+        let totalSeconds = 15 * 60; // 15 minutes
+        const countdownEl = document.getElementById('countdown');
+        
+        function updateCountdown() {
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            countdownEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            if (totalSeconds > 0) {
+                totalSeconds--;
+                setTimeout(updateCountdown, 1000);
+            } else {
+                countdownEl.textContent = "OFFER EXPIRED";
+                countdownEl.style.color = '#ff0000';
+            }
+        }
+        
+        updateCountdown();
+
+        // Track clicks
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Analytics tracking would go here
+                console.log('CTA clicked:', new Date().toISOString());
+            });
+        });
+    </script>
+</body>
+</html>
