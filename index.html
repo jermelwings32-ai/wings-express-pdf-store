@@ -719,9 +719,58 @@
             line-height: 1.5;
         }
 
+        /* HAMBURGER */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: all .3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
         @media(max-width:768px) {
+            .hamburger {
+                display: flex;
+            }
+
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 15, 0.97);
+                backdrop-filter: blur(16px);
+                flex-direction: column;
+                padding: 20px 24px;
+                gap: 16px;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.open {
+                display: flex;
             }
 
             .featured-review {
@@ -745,6 +794,9 @@
     <nav>
         <div class="nav-inner">
             <span class="logo">Wings Express</span>
+            <button class="hamburger" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
             <div class="nav-links">
                 <a href="#picks">Top Picks</a>
                 <a href="#amazon">Amazon Finds</a>
@@ -769,7 +821,7 @@
             <div class="trust-item"><span>✓</span> Real reviews</div>
             <div class="trust-item"><span>✓</span> Money-back guaranteed products only</div>
             <div class="trust-item"><span>✓</span> No paid placements</div>
-            <div class="trust-item"><span>✓</span> Updated March 2026</div>
+            <div class="trust-item"><span>✓</span> Updated April 2026</div>
         </div>
     </section>
 
@@ -793,7 +845,7 @@
                 <div class="pick-meta">
                     <span class="meta-chip green">180-day guarantee</span>
                     <span class="meta-chip">$59</span>
-                    <span class="meta-chip">~$200/sale commission</span>
+                    <span class="meta-chip">Made in USA</span>
                 </div>
                 <a href="/reviews/mitolyn/" class="pick-btn">Read Review + Get Best Price →</a>
             </div>
@@ -1002,7 +1054,7 @@
                     <div class="guide-sub">73 pages — AI agents, ChatGPT, N8N automation, multiple income streams</div>
                     <div class="guide-price"><span class="guide-price-old">$49.99</span><span
                             class="guide-price-new">$29.99</span></div>
-                    <a href="#" class="guide-btn">Get Instant Access</a>
+                    <a href="mailto:contact@wingsexpressllc.com?subject=AI%20Money%20Machine%202026%20Guide" class="guide-btn">Get Instant Access</a>
                 </div>
             </div>
             <div class="guide-card">
@@ -1012,7 +1064,7 @@
                     <div class="guide-sub">76 pages — $10K–$50K/month blueprint, traffic, conversion strategies</div>
                     <div class="guide-price"><span class="guide-price-old">$49.99</span><span
                             class="guide-price-new">$29.99</span></div>
-                    <a href="#" class="guide-btn">Get Instant Access</a>
+                    <a href="mailto:contact@wingsexpressllc.com?subject=Affiliate%20Marketing%20Mastery%20Guide" class="guide-btn">Get Instant Access</a>
                 </div>
             </div>
             <div class="guide-card">
@@ -1022,7 +1074,7 @@
                     <div class="guide-sub">76 pages — eBooks, Shopify, Etsy, Gumroad, zero to $5K/month</div>
                     <div class="guide-price"><span class="guide-price-old">$49.99</span><span
                             class="guide-price-new">$29.99</span></div>
-                    <a href="#" class="guide-btn">Get Instant Access</a>
+                    <a href="mailto:contact@wingsexpressllc.com?subject=AI%20Digital%20Profit%20Blueprint" class="guide-btn">Get Instant Access</a>
                 </div>
             </div>
         </div>
@@ -1037,10 +1089,10 @@
             </div>
             <div>
                 <h5>Top Picks</h5>
-                <a href="affiliate/bridge-pages/mitolyn/index.html">Mitolyn Review</a>
-                <a href="affiliate/bridge-pages/javaburn/index.html">Java Burn Review</a>
-                <a href="affiliate/bridge-pages/prodentim/index.html">ProDentim Review</a>
-                <a href="affiliate/bridge-pages/sugardefender/index.html">Sugar Defender</a>
+                <a href="/reviews/mitolyn/">Mitolyn Review</a>
+                <a href="/reviews/javaburn/">Java Burn Review</a>
+                <a href="/reviews/prodentim/">ProDentim Review</a>
+                <a href="/reviews/sugardefender/">Sugar Defender</a>
             </div>
             <div>
                 <h5>Amazon</h5>
@@ -1050,7 +1102,7 @@
             </div>
             <div>
                 <h5>Company</h5>
-                <a href="https://youtube.com/@aimusicvibespro" target="_blank">YouTube</a>
+                <a href="https://www.tiktok.com/@poppaeza" target="_blank">TikTok</a>
                 <a href="https://t.me/Wingsexpressbot" target="_blank">Telegram Bot</a>
                 <a href="mailto:contact@wingsexpressllc.com">Contact</a>
                 <a href="#guides">Guides</a>
