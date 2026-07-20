@@ -1,627 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jer'mel Wings — Official Author & Publisher Library</title>
-    <meta name="description"
-        content="Explore the official library of Jer'mel Wings. Discover the Vance-Stanton Capital Series, keepsake memory journals, and premium wellness guides.">
-    <meta name="keywords"
-        content="Jermel Wings, Vance-Stanton Capital Series, The Broker's Last Play, The Broker's Blind Side, guided journals, tell me your story, self-publishing">
-    
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="Jer'mel Wings — Official Library">
-    <meta property="og:description" content="Explore the novels, keepsake journals, and guides by Jer'mel Wings.">
-    <meta property="og:image" content="covers/cover_book1.jpg">
-    <meta property="og:url" content="https://wingsexpressllc.com/books.html">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Link to the main style.css -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Custom overrides for Link-in-Bio / Books layout -->
+    <title>Redirecting to Jer'mel Wings on Amazon...</title>
+    <!-- Instant client-side redirect to Amazon search page for Jer'mel Wings books -->
+    <meta http-equiv="refresh" content="0; url=https://www.amazon.com/s?k=Jer%27mel+Wings">
+    <script>
+        window.location.href = "https://www.amazon.com/s?k=Jer%27mel+Wings";
+    </script>
     <style>
-        :root {
-            --col-romance: linear-gradient(135deg, #4c1d95 0%, #1e1b4b 100%);
-            --col-journal: linear-gradient(135deg, #065f46 0%, #064e3b 100%);
-            --col-wellness: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-        }
-
         body {
-            background: radial-gradient(circle at top, #14142d 0%, #0a0a14 70%);
-            min-height: 100vh;
+            background-color: #0a0a14;
+            color: #f0f0f8;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
-            flex-direction: column;
-        }
-
-        .author-header {
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
             text-align: center;
-            padding: 60px 24px 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
-
-        .author-avatar {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--color-accent) 0%, #f5d54a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #0a0a14;
-            margin-bottom: 20px;
-            box-shadow: 0 0 30px var(--color-accent-glow), var(--shadow-card);
-            position: relative;
-            border: 3px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .author-avatar::after {
-            content: '';
-            position: absolute;
-            top: -6px;
-            left: -6px;
-            right: -6px;
-            bottom: -6px;
-            border-radius: 50%;
-            border: 1px dashed var(--color-accent);
-            opacity: 0.5;
-            animation: rotateDashed 20s linear infinite;
-        }
-
-        @keyframes rotateDashed {
-            100% { transform: rotate(360deg); }
-        }
-
-        .author-title {
-            font-size: 2rem;
-            margin-bottom: 8px;
-            font-weight: 800;
-        }
-
-        .author-bio {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            max-width: 480px;
-            margin: 0 auto 24px;
-            line-height: 1.5;
-        }
-
-        .social-chips {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-
-        .chip {
-            padding: 8px 18px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 100px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-primary);
-            transition: all var(--transition-fast);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .chip:hover {
-            border-color: var(--color-accent);
-            box-shadow: var(--shadow-glow);
-            transform: translateY(-2px);
-        }
-
-        /* Filter Tabs */
-        .tab-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 40px;
-            padding: 0 24px;
-            flex-wrap: wrap;
-        }
-
-        .tab-btn {
-            padding: 10px 22px;
-            background: rgba(20, 20, 40, 0.5);
-            border: 1px solid var(--border-subtle);
-            border-radius: 100px;
-            color: var(--text-secondary);
-            font-family: var(--font-heading);
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all var(--transition-fast);
-            backdrop-filter: blur(8px);
-        }
-
-        .tab-btn:hover, .tab-btn.active {
-            background: var(--gradient-accent);
-            color: #0a0a14;
-            border-color: transparent;
-            box-shadow: var(--shadow-glow);
-        }
-
-        /* Books Layout */
-        .books-grid {
-            max-width: 800px;
-            margin: 0 auto 80px;
-            padding: 0 24px;
-            display: grid;
-            gap: 30px;
-        }
-
-        .book-card {
-            background: var(--bg-glass);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
+        .container {
+            max-width: 400px;
             padding: 24px;
-            display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 30px;
-            backdrop-filter: blur(16px);
-            transition: all var(--transition-med);
-            box-shadow: var(--shadow-card);
         }
-
-        .book-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(226, 183, 20, 0.1);
+            border-radius: 50%;
+            border-top-color: #e2b714;
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 20px;
         }
-
-        .cover-container {
-            width: 100%;
-            height: 260px;
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-            position: relative;
-            background: #151520;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
-
-        .cover-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform var(--transition-med);
-        }
-
-        .book-card:hover .cover-img {
-            transform: scale(1.05);
-        }
-
-        /* Stylized CSS book covers for missing assets */
-        .fallback-cover {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 20px 14px;
-            color: #fff;
-            position: relative;
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
-            border-left: 5px solid rgba(255,255,255,0.1);
-        }
-
-        .fallback-cover.romance { background: var(--col-romance); }
-        .fallback-cover.journal { background: var(--col-journal); }
-        .fallback-cover.wellness { background: var(--col-wellness); }
-
-        .fallback-cover::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 10px;
-            width: 1px;
-            background: rgba(255,255,255,0.1);
-        }
-
-        .fallback-cover-series {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--color-accent);
-            font-family: var(--font-body);
-        }
-
-        .fallback-cover-title {
-            font-size: 1rem;
-            line-height: 1.3;
-            font-weight: 700;
-            margin: auto 0;
-        }
-
-        .fallback-cover-author {
-            font-size: 0.7rem;
-            letter-spacing: 0.1em;
-            color: #a0a0b8;
-            font-family: var(--font-body);
-        }
-
-        .book-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .book-badge-container {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-        }
-
-        .book-badge {
-            display: inline-block;
-            padding: 4px 10px;
-            font-size: 0.75rem;
+        h1 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
             font-weight: 600;
-            border-radius: 100px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
         }
-
-        .badge-live {
-            background: rgba(226, 183, 20, 0.15);
-            border: 1px solid var(--color-accent);
-            color: var(--color-accent);
-        }
-
-        .badge-coming {
-            background: rgba(6, 182, 212, 0.15);
-            border: 1px solid #06b6d4;
-            color: #06b6d4;
-        }
-
-        .badge-cat {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-secondary);
-        }
-
-        .book-card-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1.3;
-            margin-bottom: 6px;
-        }
-
-        .book-card-subtitle {
+        p {
+            color: #a0a0b8;
             font-size: 0.9rem;
-            color: var(--color-accent);
-            margin-bottom: 12px;
-            font-weight: 500;
         }
-
-        .book-desc {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
+        a {
+            color: #e2b714;
+            text-decoration: none;
+            font-weight: 600;
         }
-
-        .book-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn-buy {
-            padding: 10px 20px;
-            border-radius: var(--radius-sm);
-            font-size: 0.85rem;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all var(--transition-fast);
-            cursor: pointer;
-        }
-
-        .btn-amazon-primary {
-            background: var(--gradient-accent);
-            color: #0a0a14;
-            box-shadow: 0 4px 12px rgba(226, 183, 20, 0.2);
-        }
-
-        .btn-amazon-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(226, 183, 20, 0.4);
-        }
-
-        .btn-amazon-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-primary);
-        }
-
-        .btn-amazon-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .btn-disabled {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px dashed rgba(255, 255, 255, 0.08);
-            color: var(--text-muted);
-            cursor: not-allowed;
-        }
-
-        /* Footer styling alignment */
-        footer {
-            margin-top: auto;
-            padding: 40px 24px;
-            border-top: 1px solid var(--border-subtle);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            background: rgba(10, 10, 20, 0.8);
-        }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 680px) {
-            .book-card {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                max-width: 420px;
-                margin: 0 auto;
-            }
-
-            .cover-container {
-                height: 320px;
-            }
-
-            .author-header {
-                padding: 40px 20px 20px;
-            }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-
 <body>
-
-    <!-- Small Premium Sticky Header -->
-    <header style="border-bottom: 1px solid var(--border-subtle); background: rgba(10,10,20,0.8); backdrop-filter: blur(12px);">
-        <div class="nav-inner" style="padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;">
-            <a href="index.html" class="logo">WINGS EXPRESS</a>
-            <a href="index.html" class="chip" style="padding: 6px 14px; font-size: 0.75rem; border-color: rgba(255,255,255,0.15)">
-                ← Back to Main
-            </a>
-        </div>
-    </header>
-
-    <!-- Author Profile Header -->
-    <main style="flex: 1;">
-        <div class="author-header">
-            <div class="author-avatar" aria-label="JW Logo Initials">JW</div>
-            <h1 class="author-title gradient-text">Jer'mel Wings</h1>
-            <p class="author-bio">
-                Official profile of author & publisher Jer'mel Wings. Explore high-stakes capital romance series, guided keepsakes, and performance wellness logs.
-            </p>
-            <div class="social-chips">
-                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="chip" id="tiktok-social-link">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.74-3.94-1.74-.22-.21-.42-.45-.6-.7-.03 2.89-.01 5.79-.02 8.68-.06 2.01-.67 4.09-2.09 5.56-1.53 1.62-3.83 2.45-6.07 2.24-2.52-.19-5.02-1.76-6.04-4.14-1.2-2.73-.66-6.19 1.38-8.38 1.48-1.63 3.73-2.51 5.95-2.3v4.02c-1.39-.14-2.88.42-3.66 1.6-1.01 1.49-.6 3.69.87 4.7 1.25.89 3.03.62 3.91-.65.26-.37.39-.81.4-1.25-.01-4.08 0-8.15 0-12.22z"/></svg>
-                    TikTok
-                </a>
-                <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer" class="chip" id="amazon-author-link">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M15.93 17.09c-.27-.47-1.12-1.58-1.53-2.06-.52-.61-1.07-1.46-1.07-2.3 0-1.89 1.75-2.23 3.23-2.23.47 0 .91.03 1.32.1v1.65c-.24-.03-.54-.05-.82-.05-1.02 0-1.63.26-1.63 1.05 0 .54.34.88.89.88.6 0 1.1-.38 1.37-.87v2.13c-.45.48-1.16.85-1.76.85-.92.01-1.47-.56-1.81-1.02zm-3.9 1.4c1.86.35 4.54.54 6.36-.78.43-.31.81-.74.91-1.3.11-.64-.23-1.21-.73-1.61-.59-.47-1.42-.71-2.15-.97-.93-.32-1.92-.61-2.42-1.24-.26-.33-.36-.76-.36-1.18 0-1 .61-1.82 1.63-2.06 1.05-.24 2.14.07 2.94.75.29.24.5.54.67.87.1.18.29.27.49.23.23-.05.39-.24.39-.48v-.81c0-.18-.1-.35-.26-.44-.38-.22-.77-.42-1.17-.57-1.19-.48-2.61-.43-3.74.22-1.29.74-1.96 2.12-1.96 3.6 0 1.25.48 2.37 1.37 3.12.8.68 1.84.99 2.81 1.27.87.26 1.81.54 2.21 1.09.2.27.27.63.27.96 0 .82-.54 1.48-1.39 1.72-1.1.32-2.31.06-3.23-.55-.26-.17-.48-.4-.64-.67-.09-.16-.27-.25-.45-.23-.22.03-.38.2-.4.42l-.12.87c-.03.22.08.43.27.53.53.28 1.13.5 1.75.64zm-5.07 1.55c-2.44-.33-4.52-1.57-5.91-3.41-.21-.29.07-.67.4-.53 2.16.92 4.67 1.4 7.23 1.34 2.5-.06 4.93-.57 7.03-1.48.33-.14.61.24.4.52-1.42 1.83-3.52 3.03-5.98 3.37-.9.12-2.27.31-3.17.19zm14.39.29c.35.43.19 1.08-.32 1.22-1.63.45-3.56.63-5.32.61-3 .02-5.95-.53-8.68-1.53-.47-.17-.58-.77-.18-1.07l.83-.62c.2-.15.48-.12.65.07 2.19 2.45 5.56 3.93 9.22 3.93 1.26 0 2.5-.18 3.8-.52 1.31-.34 1.37 1.37.5 1.71c.71 0-1.16.74-.7 1.2zm1.66-3.8c-.28-.32-.71-.4-1.09-.23l-.79.35c-.24.11-.32.4-.19.62.9 1.57 2.23 2.87 3.86 3.75.22.12.5.03.6-.2l.44-.92c.11-.24-.01-.52-.23-.62-1.19-.58-2.18-1.48-2.83-2.61-.1-.17-.07-.37.23-.14z"/></svg>
-                    Amazon Page
-                </a>
-            </div>
-        </div>
-
-        <!-- Filter Switcher -->
-        <div class="tab-container">
-            <button class="tab-btn active" onclick="filterGenre('all')">All Library</button>
-            <button class="tab-btn" onclick="filterGenre('romance')">Romance & Thrillers</button>
-            <button class="tab-btn" onclick="filterGenre('wellness')">Wellness & Self-Help</button>
-            <button class="tab-btn" onclick="filterGenre('journal')">Keepsake Journals</button>
-        </div>
-
-        <!-- Books Grid -->
-        <div class="books-grid">
-            
-            <!-- Book 1 -->
-            <div class="book-card" data-genre="romance">
-                <div class="cover-container">
-                    <img src="covers/cover_book1.jpg" alt="The Broker's Last Play Cover Art" class="cover-img">
-                </div>
-                <div class="book-info">
-                    <div>
-                        <div class="book-badge-container">
-                            <span class="book-badge badge-live">Available Now</span>
-                            <span class="book-badge badge-cat">Billionaire Romance</span>
-                        </div>
-                        <h2 class="book-card-title">The Broker's Last Play</h2>
-                        <h3 class="book-card-subtitle">Vance-Stanton Capital Series: Book 1</h3>
-                        <p class="book-desc">
-                            High stakes, fierce rivalries, and undeniable attraction. In the ruthless corridors of venture capital, the ultimate takeover isn't business—it's personal. Start the series today.
-                        </p>
-                    </div>
-                    <div class="book-actions">
-                        <a href="https://www.amazon.com/dp/B0H8ZJ1VZ4" target="_blank" rel="noopener noreferrer" class="btn-buy btn-amazon-primary" id="buy-book1-paperback">
-                            Buy Paperback ($9.99)
-                        </a>
-                        <a href="https://www.amazon.com/dp/B0H8X8YWNS" target="_blank" rel="noopener noreferrer" class="btn-buy btn-amazon-secondary" id="buy-book1-ebook">
-                            Kindle Edition
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book 2 -->
-            <div class="book-card" data-genre="romance">
-                <div class="cover-container">
-                    <img src="covers/cover_book2.jpg" alt="The Broker's Blind Side Cover Art" class="cover-img">
-                </div>
-                <div class="book-info">
-                    <div>
-                        <div class="book-badge-container">
-                            <span class="book-badge badge-coming">In KDP Review</span>
-                            <span class="book-badge badge-cat">Billionaire Romance</span>
-                        </div>
-                        <h2 class="book-card-title">The Broker's Blind Side</h2>
-                        <h3 class="book-card-subtitle">Vance-Stanton Capital Series: Book 2</h3>
-                        <p class="book-desc">
-                            The thrilling sequel to the Vance-Stanton Capital saga. Sometimes the best deals are the ones you never see coming. Can business and pleasure mix when the margins are this tight?
-                        </p>
-                    </div>
-                    <div class="book-actions">
-                        <span class="btn-buy btn-disabled" title="Currently undergoing publisher review" id="disabled-book2-btn">
-                            Paperback Coming Soon
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reverse Aging Protocol -->
-            <div class="book-card" data-genre="wellness">
-                <div class="cover-container">
-                    <div class="fallback-cover wellness">
-                        <span class="fallback-cover-series">Wellness & Longevity</span>
-                        <h2 class="fallback-cover-title">The Reverse Aging Protocol</h2>
-                        <span class="fallback-cover-author">Jer'mel Wings</span>
-                    </div>
-                </div>
-                <div class="book-info">
-                    <div>
-                        <div class="book-badge-container">
-                            <span class="book-badge badge-live">Available Now</span>
-                            <span class="book-badge badge-cat">Men's Fitness & Health</span>
-                        </div>
-                        <h2 class="book-card-title">The Reverse Aging Protocol for Men Over 40</h2>
-                        <h3 class="book-card-subtitle">The 6-Week System to Drop Fat, Rebuild Muscle & Longevity</h3>
-                        <p class="book-desc">
-                            A comprehensive, step-by-step strategy designed for mature men seeking to optimize cellular longevity, burn persistent fat, build lean skeletal tissue, and regain peak biological vitality.
-                        </p>
-                    </div>
-                    <div class="book-actions">
-                        <a href="https://www.amazon.com/dp/B0H8TVHCL2" target="_blank" rel="noopener noreferrer" class="btn-buy btn-amazon-primary" id="buy-aging-ebook">
-                            Buy Kindle Edition
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dad Journal -->
-            <div class="book-card" data-genre="journal">
-                <div class="cover-container">
-                    <div class="fallback-cover journal">
-                        <span class="fallback-cover-series">Family Keepsakes</span>
-                        <h2 class="fallback-cover-title">Dad, Tell Me Your Story</h2>
-                        <span class="fallback-cover-author">Jer'mel Wings</span>
-                    </div>
-                </div>
-                <div class="book-info">
-                    <div>
-                        <div class="book-badge-container">
-                            <span class="book-badge badge-live">Available Now</span>
-                            <span class="book-badge badge-cat">Guided Journal</span>
-                        </div>
-                        <h2 class="book-card-title">Dad, Tell Me Your Story</h2>
-                        <h3 class="book-card-subtitle">A Guided Journal for Sharing Your Life & Memories</h3>
-                        <p class="book-desc">
-                            Create a timeless keepsake of memories, wisdom, and life stories. Over 100 carefully selected prompts make it easy for fathers to write down their unique life journey for their kids.
-                        </p>
-                    </div>
-                    <div class="book-actions">
-                        <a href="https://www.amazon.com/dp/B0H8Y4ZDTP" target="_blank" rel="noopener noreferrer" class="btn-buy btn-amazon-primary" id="buy-dad-paperback">
-                            Buy Paperback
-                        </a>
-                        <a href="https://www.amazon.com/dp/B0H8WCZ9J2" target="_blank" rel="noopener noreferrer" class="btn-buy btn-amazon-secondary" id="buy-dad-ebook">
-                            Kindle Edition
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Grandpa Journal -->
-            <div class="book-card" data-genre="journal">
-                <div class="cover-container">
-                    <div class="fallback-cover journal" style="background: linear-gradient(135deg, #1b3a4b 0%, #0c1a24 100%);">
-                        <span class="fallback-cover-series">Family Keepsakes</span>
-                        <h2 class="fallback-cover-title">Grandpa, Tell Me Your Story</h2>
-                        <span class="fallback-cover-author">Jer'mel Wings</span>
-                    </div>
-                </div>
-                <div class="book-info">
-                    <div>
-                        <div class="book-badge-container">
-                            <span class="book-badge badge-live">Available Now</span>
-                            <span class="book-badge badge-cat">Guided Journal</span>
-                        </div>
-                        <h2 class="book-card-title">Grandpa, Tell Me Your Story</h2>
-                        <h3 class="book-card-subtitle">A Guided Journal for Sharing Legacy & Love</h3>
-                        <p class="book-desc">
-                            An elegant guided memory book designed specifically for grandfathers. Capture generational wisdom, unforgettable historic memories, and heartfelt life lessons for future grandchildren.
-                        </p>
-                    </div>
-                    <div class="book-actions">
-                        <a href="https://www.amazon.com/dp/B0H8XS84YN" target="_blank" rel="noopener noreferrer" class="btn-buy btn-amazon-primary" id="buy-grandpa-paperback">
-                            Buy Paperback
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Footer matching main site theme -->
-    <footer>
-        <p>© 2026 WINGS EXPRESS LLC. All rights reserved.</p>
-        <p style="margin-top: 8px; font-size: 0.75rem;">Amazon, Kindle, and all related logos are trademarks of Amazon.com, Inc. or its affiliates.</p>
-    </footer>
-
-    <!-- Interactive filters script -->
-    <script>
-        function filterGenre(genre) {
-            // Update active tab styling
-            var tabs = document.querySelectorAll('.tab-btn');
-            tabs.forEach(function(tab) {
-                tab.classList.remove('active');
-            });
-            event.target.classList.add('active');
-
-            // Show/hide book cards
-            var cards = document.querySelectorAll('.book-card');
-            cards.forEach(function(card) {
-                if (genre === 'all' || card.getAttribute('data-genre') === genre) {
-                    card.style.display = 'grid';
-                    // Apply subtle fade-in animation
-                    card.style.opacity = 0;
-                    setTimeout(function() {
-                        card.style.opacity = 1;
-                        card.style.transition = 'opacity 0.3s ease';
-                    }, 50);
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <div class="container">
+        <div class="spinner" aria-hidden="true"></div>
+        <h1>Redirecting to Amazon</h1>
+        <p>Opening Jer'mel Wings' official bookshelf directly in the Amazon app...</p>
+        <p style="margin-top: 20px; font-size: 0.8rem;">
+            <a href="https://www.amazon.com/s?k=Jer%27mel+Wings">Click here if you are not automatically redirected</a>
+        </p>
+    </div>
 </body>
-
 </html>
