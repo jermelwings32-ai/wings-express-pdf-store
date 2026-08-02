@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wings Express — Honest Health & Wellness Reviews | Best Supplements 2026</title>
-    <meta name="description"
-        content="Honest reviews of the best health supplements, wellness products, and Amazon finds. Real results from real people. Find what actually works.">
-    <meta name="keywords"
-        content="supplement reviews, best supplements 2026, mitolyn review, prodentim review, java burn review, sugar defender review, amazon health finds">
-    <meta property="og:title" content="Wings Express — Honest Health Reviews & Top Picks">
-    <meta property="og:description"
-        content="Real reviews, real results. Find the best supplements and health products that actually work.">
-    <meta property="og:url" content="https://wingsexpressllc.com">
+    <title>WINGS EXPRESS LLC — Official Business Holdings & Digital Suite</title>
+    <meta name="description" content="Official website of WINGS EXPRESS LLC. Premier business credit blueprints, digital product playbooks, e-commerce brands, and verified tech reviews.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg: #0a0a0f;
-            --bg2: #111118;
-            --card: #16161f;
-            --border: rgba(255, 255, 255, 0.08);
-            --text: #f0f0f5;
-            --muted: #8888aa;
-            --accent: #7c3aed;
-            --accent2: #06b6d4;
-            --green: #10b981;
-            --orange: #f59e0b;
-            --red: #ef4444;
-            --radius: 16px;
+            --bg: #ffffff;
+            --bg-subtle: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --border-hover: #cbd5e1;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --brand-primary: #2563eb;
+            --brand-hover: #1d4ed8;
+            --accent-green: #16a34a;
+            --accent-gold: #d97706;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+            --shadow-lg: 0 10px 25px -5px rgba(0,0,0,0.08);
+            --radius-md: 12px;
+            --radius-lg: 16px;
         }
 
         * {
@@ -40,10 +38,11 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
         a {
@@ -51,20 +50,18 @@
             text-decoration: none;
         }
 
-        /* NAV */
-        nav {
-            position: fixed;
+        /* NAVIGATION */
+        header {
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
             z-index: 100;
-            background: rgba(10, 10, 15, 0.92);
-            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
         }
 
         .nav-inner {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 16px 24px;
             display: flex;
@@ -72,13 +69,16 @@
             justify-content: space-between;
         }
 
-        .logo {
+        .logo-text {
             font-family: 'Outfit', sans-serif;
             font-weight: 800;
-            font-size: 1.3rem;
-            background: linear-gradient(135deg, #7c3aed, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 1.35rem;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--brand-primary);
         }
 
         .nav-links {
@@ -87,995 +87,493 @@
             align-items: center;
         }
 
-        .nav-links a {
-            color: var(--muted);
-            font-size: 0.9rem;
-            transition: color .2s;
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: var(--text);
+        .nav-link:hover {
+            color: var(--brand-primary);
         }
 
         .nav-cta {
-            background: var(--accent);
-            color: white !important;
-            padding: 8px 20px;
-            border-radius: 8px;
-            font-weight: 600 !important;
+            background: var(--brand-primary);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 99px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s, transform 0.2s;
         }
 
-        /* HERO */
-        .hero {
-            padding: 120px 24px 80px;
+        .nav-cta:hover {
+            background: var(--brand-hover);
+            transform: translateY(-1px);
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+            padding: 80px 24px 60px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            border-bottom: 1px solid var(--border);
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -200px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
-            pointer-events: none;
+        .hero-container {
+            max-width: 850px;
+            margin: 0 auto;
         }
 
-        .hero-badge {
-            display: inline-block;
-            background: rgba(124, 58, 237, 0.15);
-            border: 1px solid rgba(124, 58, 237, 0.4);
-            color: #a78bfa;
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             padding: 6px 16px;
-            border-radius: 20px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 99px;
+            color: var(--brand-primary);
             font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 20px;
+            font-weight: 600;
+            margin-bottom: 24px;
         }
 
-        .hero h1 {
+        .hero-title {
             font-family: 'Outfit', sans-serif;
-            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-size: 3.2rem;
             font-weight: 800;
+            color: var(--text-primary);
             line-height: 1.15;
+            letter-spacing: -1px;
             margin-bottom: 20px;
         }
 
-        .grad {
-            background: linear-gradient(135deg, #7c3aed, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .hero-title span {
+            color: var(--brand-primary);
         }
 
-        .hero p {
-            color: var(--muted);
-            font-size: 1.15rem;
-            max-width: 620px;
-            margin: 0 auto 36px;
+        .hero-sub {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 36px;
+            line-height: 1.6;
         }
 
         .hero-btns {
             display: flex;
-            gap: 12px;
+            gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+        .btn-main {
+            background: var(--brand-primary);
+            color: #ffffff;
             padding: 14px 28px;
             border-radius: 10px;
             font-weight: 600;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: all .2s;
+            font-size: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.2s;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, #7c3aed, #5b21b6);
-            color: white;
-        }
-
-        .btn-primary:hover {
+        .btn-main:hover {
+            background: var(--brand-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
+            box-shadow: var(--shadow-lg);
         }
 
         .btn-outline {
+            background: #ffffff;
+            color: var(--text-primary);
             border: 1px solid var(--border);
-            color: var(--text);
-            background: transparent;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
         }
 
         .btn-outline:hover {
-            background: var(--card);
+            background: var(--bg-subtle);
+            border-color: var(--border-hover);
         }
 
-        .hero-trust {
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        .trust-item {
-            color: var(--muted);
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .trust-item span {
-            color: var(--green);
-        }
-
-        /* SECTION */
-        .section {
-            padding: 80px 24px;
-            max-width: 1100px;
+        /* CONTENT SECTIONS */
+        .content-section {
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 80px 24px;
         }
 
         .section-tag {
-            display: inline-block;
-            color: var(--accent2);
             font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(1.5rem, 3vw, 2.2rem);
             font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .section-sub {
-            color: var(--muted);
-            max-width: 560px;
-        }
-
-        /* TOP PICKS GRID */
-        .picks-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 24px;
-            margin-top: 40px;
-        }
-
-        .pick-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 24px;
-            position: relative;
-            transition: border-color .2s, transform .2s;
-        }
-
-        .pick-card:hover {
-            border-color: rgba(124, 58, 237, 0.4);
-            transform: translateY(-3px);
-        }
-
-        .pick-badge {
-            position: absolute;
-            top: -12px;
-            left: 20px;
-            background: linear-gradient(135deg, #7c3aed, #06b6d4);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 20px;
-            text-transform: uppercase;
-        }
-
-        .pick-badge.hot {
-            background: linear-gradient(135deg, #f59e0b, #ef4444);
-        }
-
-        .pick-badge.new {
-            background: linear-gradient(135deg, #10b981, #06b6d4);
-        }
-
-        .pick-emoji {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .pick-name {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .pick-niche {
-            color: var(--accent2);
-            font-size: 0.8rem;
-            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .pick-desc {
-            color: var(--muted);
-            font-size: 0.9rem;
-            margin-bottom: 16px;
-            line-height: 1.65;
-        }
-
-        .pick-meta {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-
-        .meta-chip {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 4px 10px;
-            font-size: 0.78rem;
-            color: var(--muted);
-        }
-
-        .meta-chip.green {
-            color: var(--green);
-            border-color: rgba(16, 185, 129, 0.3);
-            background: rgba(16, 185, 129, 0.08);
-        }
-
-        .pick-btn {
-            display: block;
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(6, 182, 212, 0.15));
-            border: 1px solid rgba(124, 58, 237, 0.4);
-            color: var(--text);
-            text-align: center;
-            padding: 12px;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all .2s;
-        }
-
-        .pick-btn:hover {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(6, 182, 212, 0.3));
-            border-color: rgba(124, 58, 237, 0.7);
-        }
-
-        .stars {
-            color: var(--orange);
-            font-size: 0.9rem;
+            color: var(--brand-primary);
             margin-bottom: 8px;
         }
 
-        /* FEATURED REVIEW */
-        .featured-review {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 40px;
-            margin-top: 48px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        .section-heading {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
         }
 
-        .review-label {
-            color: var(--orange);
-            font-size: 0.8rem;
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        /* GRID SYSTEM */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        /* CARD COMPONENT */
+        .item-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.25s ease;
+        }
+
+        .item-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: #cbd5e1;
+        }
+
+        .card-category {
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
+            color: var(--brand-primary);
             margin-bottom: 12px;
         }
 
-        .review-title {
+        .card-name {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .card-text {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .card-price-tag {
+            font-size: 1.4rem;
             font-weight: 800;
+            color: var(--text-primary);
             margin-bottom: 16px;
         }
 
-        .review-quote {
-            color: var(--muted);
-            font-style: italic;
-            font-size: 1rem;
-            border-left: 3px solid var(--accent);
-            padding-left: 16px;
-            margin: 20px 0;
-        }
-
-        .review-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 16px;
-            margin: 24px 0;
-        }
-
-        .rstat {
+        .card-action-btn {
+            display: block;
             text-align: center;
+            background: #f1f5f9;
+            color: var(--text-primary);
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
         }
 
-        .rstat-num {
+        .item-card:hover .card-action-btn {
+            background: var(--brand-primary);
+            color: #ffffff;
+        }
+
+        /* AMAZON VERIFIED TAG */
+        .amazon-card .card-category {
+            color: var(--accent-gold);
+        }
+
+        .amazon-card:hover .card-action-btn {
+            background: var(--accent-gold);
+            color: #ffffff;
+        }
+
+        /* BRANDS SECTION */
+        .brands-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .brand-box {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            transition: all 0.2s;
+        }
+
+        .brand-box:hover {
+            border-color: var(--brand-primary);
+            background: #ffffff;
+            box-shadow: var(--shadow-md);
+        }
+
+        .brand-name-heading {
             font-family: 'Outfit', sans-serif;
             font-size: 1.8rem;
             font-weight: 800;
-            color: var(--accent2);
-        }
-
-        .rstat-label {
-            color: var(--muted);
-            font-size: 0.75rem;
-        }
-
-        .review-btn {
-            display: block;
-            background: linear-gradient(135deg, #7c3aed, #06b6d4);
-            color: white;
-            text-align: center;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all .2s;
-            margin-top: 20px;
-        }
-
-        .review-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
-        }
-
-        /* AMAZON FINDS */
-        .amazon-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .amazon-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            transition: all .2s;
-        }
-
-        .amazon-card:hover {
-            border-color: rgba(255, 153, 0, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .amazon-icon {
-            font-size: 2rem;
+            color: var(--text-primary);
             margin-bottom: 10px;
         }
 
-        .amazon-name {
-            font-weight: 600;
-            margin-bottom: 6px;
-            font-size: 0.95rem;
-        }
-
-        .amazon-price {
-            color: var(--orange);
-            font-weight: 700;
-            margin-bottom: 12px;
-            font-size: 1.1rem;
-        }
-
-        .amazon-btn {
-            background: linear-gradient(135deg, #ff9900, #ffad33);
-            color: #1a0a00;
-            font-weight: 700;
-            font-size: 0.85rem;
-            padding: 10px 16px;
-            border-radius: 8px;
-            display: block;
-            transition: all .2s;
-        }
-
-        .amazon-btn:hover {
-            transform: scale(1.02);
-        }
-
-        /* EMAIL CAPTURE */
-        .email-section {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
-            border: 1px solid rgba(124, 58, 237, 0.3);
-            border-radius: var(--radius);
-            padding: 60px 40px;
-            text-align: center;
-            margin: 80px 0;
-        }
-
-        .email-section h2 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-        }
-
-        .email-section p {
-            color: var(--muted);
-            margin-bottom: 28px;
-        }
-
-        .email-form {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-            max-width: 480px;
-            margin: 0 auto;
-        }
-
-        .email-input {
-            flex: 1;
-            min-width: 220px;
-            padding: 14px 18px;
-            background: var(--bg2);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            color: var(--text);
-            font-size: 0.95rem;
-            outline: none;
-        }
-
-        .email-input:focus {
-            border-color: rgba(124, 58, 237, 0.5);
-        }
-
-        .email-btn {
-            background: var(--accent);
-            color: white;
-            padding: 14px 24px;
-            border-radius: 10px;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: all .2s;
-        }
-
-        .email-btn:hover {
-            background: #6d28d9;
-        }
-
-        .email-fine {
-            color: var(--muted);
-            font-size: 0.75rem;
-            margin-top: 12px;
-        }
-
-        /* GUIDES */
-        .guides-strip {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 36px;
-        }
-
-        .guide-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-            transition: all .2s;
-        }
-
-        .guide-card:hover {
-            border-color: rgba(124, 58, 237, 0.4);
-        }
-
-        .guide-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-
-        .guide-name {
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .guide-sub {
-            color: var(--muted);
-            font-size: 0.85rem;
-            margin-bottom: 12px;
-        }
-
-        .guide-price {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .guide-price-old {
-            color: var(--muted);
-            text-decoration: line-through;
-            font-size: 0.85rem;
-        }
-
-        .guide-price-new {
-            color: var(--green);
-            font-weight: 700;
-        }
-
-        .guide-btn {
+        .brand-action-link {
             display: inline-block;
-            margin-top: 12px;
-            background: rgba(124, 58, 237, 0.15);
-            border: 1px solid rgba(124, 58, 237, 0.35);
-            color: var(--text);
-            padding: 8px 16px;
+            margin-top: 20px;
+            background: var(--text-primary);
+            color: #ffffff;
+            padding: 12px 24px;
             border-radius: 8px;
-            font-size: 0.85rem;
             font-weight: 600;
-            transition: all .2s;
+            font-size: 0.9rem;
+            transition: background 0.2s;
         }
 
-        .guide-btn:hover {
-            background: rgba(124, 58, 237, 0.3);
-        }
-
-        /* DIVIDER */
-        .divider {
-            height: 1px;
-            background: var(--border);
-            margin: 0 24px;
+        .brand-action-link:hover {
+            background: var(--brand-primary);
         }
 
         /* FOOTER */
         footer {
-            border-top: 1px solid var(--border);
-            padding: 48px 24px 24px;
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 60px 24px 30px;
+            margin-top: 60px;
         }
 
         .footer-inner {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #334155;
         }
 
-        .footer-brand .logo {
-            font-size: 1.1rem;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .footer-brand p {
-            color: var(--muted);
-            font-size: 0.85rem;
-            max-width: 220px;
-        }
-
-        footer h5 {
-            font-size: 0.85rem;
+        .footer-col-title {
+            color: #ffffff;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--muted);
-            margin-bottom: 14px;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
         }
 
-        footer a {
-            display: block;
-            color: var(--muted);
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            transition: color .2s;
-        }
-
-        footer a:hover {
-            color: var(--text);
-        }
-
-        .footer-bottom {
-            max-width: 1100px;
-            margin: 40px auto 0;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
+        .footer-menu {
+            list-style: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .footer-bottom p {
-            color: var(--muted);
-            font-size: 0.8rem;
-        }
-
-        .disclaimer {
-            color: var(--muted);
-            font-size: 0.72rem;
-            max-width: 800px;
-            margin-top: 8px;
-            line-height: 1.5;
-        }
-
-        /* HAMBURGER */
-        .hamburger {
-            display: none;
             flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 8px;
+            gap: 10px;
         }
 
-        .hamburger span {
-            width: 24px;
-            height: 2px;
-            background: var(--text);
-            border-radius: 2px;
-            transition: all .3s;
+        .footer-menu a {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            transition: color 0.2s;
         }
 
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
+        .footer-menu a:hover {
+            color: #ffffff;
         }
 
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        @media(max-width:768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(10, 10, 15, 0.97);
-                backdrop-filter: blur(16px);
-                flex-direction: column;
-                padding: 20px 24px;
-                gap: 16px;
-                border-bottom: 1px solid var(--border);
-            }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .featured-review {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-inner {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .email-section {
-                padding: 40px 20px;
-            }
+        .footer-bottom-text {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            line-height: 1.6;
         }
     </style>
 </head>
-
 <body>
 
     <!-- NAV -->
-    <nav>
+    <header>
         <div class="nav-inner">
-            <span class="logo">Wings Express</span>
-            <button class="hamburger" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <div class="nav-links">
-                <a href="#picks">Top Picks</a>
-                <a href="#amazon">Amazon Finds</a>
-                <a href="#guides">Guides</a>
-                <a href="#newsletter">Newsletter</a>
-                <a href="books.html">Books</a>
-                <a href="#picks" class="nav-cta">See Reviews →</a>
-            </div>
+            <a href="#" class="logo-text">WINGS EXPRESS <span>LLC</span></a>
+            <nav class="nav-links">
+                <a href="#digital-blueprints" class="nav-link">Digital Blueprints</a>
+                <a href="#ecommerce-brands" class="nav-link">Our Brands</a>
+                <a href="#amazon-tech" class="nav-link">Amazon Deals</a>
+                <a href="mailto:contracts@wingsexpressllc.com" class="nav-cta">Contact Us</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- HERO -->
-    <section class="hero">
-        <div class="hero-badge">✅ Honest Reviews — No BS</div>
-        <h1>Find What Actually<br><span class="grad">Works for Your Health</span></h1>
-        <p>We test and review the best supplements, wellness products, and Amazon health finds so you don't waste money
-            on things that don't work.</p>
-        <div class="hero-btns">
-            <a href="#picks" class="btn btn-primary">See Top Picks →</a>
-            <a href="#amazon" class="btn btn-outline">Amazon Finds</a>
-        </div>
-        <div class="hero-trust">
-            <div class="trust-item"><span>✓</span> Real reviews</div>
-            <div class="trust-item"><span>✓</span> Money-back guaranteed products only</div>
-            <div class="trust-item"><span>✓</span> No paid placements</div>
-            <div class="trust-item"><span>✓</span> Updated April 2026</div>
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="badge">Official Corporate Directory</div>
+            <h1 class="hero-title">Premier Digital Blueprints & <span>E-Commerce Holdings</span></h1>
+            <p class="hero-sub">Direct access to verified business credit blueprints, digital product playbooks, e-commerce storefronts, and curated Amazon tech essentials.</p>
+            <div class="hero-btns">
+                <a href="#digital-blueprints" class="btn-main">Explore Blueprints →</a>
+                <a href="#ecommerce-brands" class="btn-outline">Visit Official Brands</a>
+            </div>
         </div>
     </section>
 
-    <!-- TOP PICKS -->
-    <section class="section" id="picks">
-        <div class="section-tag">Editor's Top Picks</div>
-        <h2 class="section-title">Best <span class="grad">Health Supplements</span> of 2026</h2>
-        <p class="section-sub">Reviewed by our team. Only products with money-back guarantees make the list.</p>
+    <!-- DIGITAL BLUEPRINTS -->
+    <section class="content-section" id="digital-blueprints">
+        <div class="section-tag">Instant Download PDF Suite</div>
+        <h2 class="section-heading">Business Credit & Digital Growth Blueprints</h2>
+        <p class="section-desc">Tested playbooks with instant digital access upon checkout.</p>
 
-        <div class="picks-grid">
-
-            <!-- Mitolyn -->
-            <div class="pick-card">
-                <div class="pick-badge">#1 Pick</div>
-                <span class="pick-emoji">⚡</span>
-                <div class="stars">★★★★★</div>
-                <div class="pick-name">Mitolyn</div>
-                <div class="pick-niche">Weight Loss / Metabolism</div>
-                <div class="pick-desc">Targets mitochondrial dysfunction — the real reason your metabolism slows with
-                    age. Users report better energy and real fat loss, not just water weight.</div>
-                <div class="pick-meta">
-                    <span class="meta-chip green">180-day guarantee</span>
-                    <span class="meta-chip">$59</span>
-                    <span class="meta-chip">Made in USA</span>
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="item-card">
+                <div>
+                    <div class="card-category">Business Credit</div>
+                    <div class="card-name">The $50K Business Credit Blueprint</div>
+                    <div class="card-text">Step-by-step corporate credit building system. Establish Net-30 vendor accounts & access corporate funding with zero personal credit check.</div>
                 </div>
-                <a href="/reviews/mitolyn/" class="pick-btn">Read Review + Get Best Price →</a>
+                <div>
+                    <div class="card-price-tag">$27.00</div>
+                    <a href="https://thewellnesscenter.gumroad.com/l/bfypew" target="_blank" class="card-action-btn">Get Instant Access →</a>
+                </div>
             </div>
 
-            <!-- Java Burn -->
-            <div class="pick-card">
-                <div class="pick-badge hot">☕ Trending</div>
-                <span class="pick-emoji">☕</span>
-                <div class="stars">★★★★★</div>
-                <div class="pick-name">Java Burn</div>
-                <div class="pick-niche">Metabolism / Coffee Booster</div>
-                <div class="pick-desc">Tasteless powder for your morning coffee. Activates fat burning mechanisms that
-                    coffee alone can't trigger. No taste change, no extra steps.</div>
-                <div class="pick-meta">
-                    <span class="meta-chip green">60-day guarantee</span>
-                    <span class="meta-chip">$69</span>
-                    <span class="meta-chip">Sold out last week</span>
+            <!-- Card 2 -->
+            <div class="item-card">
+                <div>
+                    <div class="card-category">Digital Business</div>
+                    <div class="card-name">48-Hour Faceless Digital Playbook</div>
+                    <div class="card-text">Build, launch, and monetize a faceless digital product business in 48 hours using AI with 100% profit margin per sale.</div>
                 </div>
-                <a href="/reviews/javaburn/" class="pick-btn">Read Full Review →</a>
+                <div>
+                    <div class="card-price-tag">$17.00</div>
+                    <a href="https://thewellnesscenter.gumroad.com/l/xstyg" target="_blank" class="card-action-btn">Get Instant Access →</a>
+                </div>
             </div>
 
-            <!-- ProDentim -->
-            <div class="pick-card">
-                <div class="pick-badge">Dentist Approved</div>
-                <span class="pick-emoji">🦷</span>
-                <div class="stars">★★★★★</div>
-                <div class="pick-name">ProDentim</div>
-                <div class="pick-niche">Oral Health / Probiotics</div>
-                <div class="pick-desc">3.5 billion good bacteria per tablet for your oral microbiome. Most people notice
-                    fresher breath and less gum sensitivity within 2-3 weeks.</div>
-                <div class="pick-meta">
-                    <span class="meta-chip green">60-day guarantee</span>
-                    <span class="meta-chip">$49</span>
-                    <span class="meta-chip">FDA-registered facility</span>
+            <!-- Card 3 -->
+            <div class="item-card">
+                <div>
+                    <div class="card-category">AI Systems</div>
+                    <div class="card-name">200+ AI Prompt Pack for Entrepreneurs</div>
+                    <div class="card-text">Copy-paste prompts for ChatGPT & Claude covering marketing strategy, social content, email workflows, and sales copy.</div>
                 </div>
-                <a href="/reviews/prodentim/" class="pick-btn">Read Full Review →</a>
+                <div>
+                    <div class="card-price-tag">$12.00</div>
+                    <a href="https://thewellnesscenter.gumroad.com/l/jxlncf" target="_blank" class="card-action-btn">Get Instant Access →</a>
+                </div>
             </div>
 
-            <!-- Sugar Defender -->
-            <div class="pick-card">
-                <div class="pick-badge new">New</div>
-                <span class="pick-emoji">🌿</span>
-                <div class="stars">★★★★★</div>
-                <div class="pick-name">Sugar Defender</div>
-                <div class="pick-niche">Blood Sugar / Energy</div>
-                <div class="pick-desc">8 research-backed ingredients including Gymnema (the "sugar destroyer") and
-                    Chromium. Targets cravings and blood sugar spikes at the root cause.</div>
-                <div class="pick-meta">
-                    <span class="meta-chip green">60-day guarantee</span>
-                    <span class="meta-chip">$69</span>
-                    <span class="meta-chip">Non-GMO</span>
+            <!-- Card 4 -->
+            <div class="item-card">
+                <div>
+                    <div class="card-category">Side Income</div>
+                    <div class="card-name">The $1K Side Hustle Starter Kit</div>
+                    <div class="card-text">7 high-demand side hustles you can launch this weekend for $0 upfront cash. Includes step-by-step client acquisition roadmap.</div>
                 </div>
-                <a href="/reviews/sugardefender/" class="pick-btn">Read Full Review →</a>
-            </div>
-
-            <!-- HepatoBurn -->
-            <div class="pick-card">
-                <span class="pick-emoji">🔥</span>
-                <div class="stars">★★★★½</div>
-                <div class="pick-name">HepatoBurn</div>
-                <div class="pick-niche">Liver Health / Belly Fat</div>
-                <div class="pick-desc">Targets liver function to address stubborn belly fat. Milk Thistle, Berberine,
-                    and Turmeric support the body's natural detox and fat-burning pathways.</div>
-                <div class="pick-meta">
-                    <span class="meta-chip green">180-day guarantee</span>
-                    <span class="meta-chip">$69</span>
-                </div>
-                <a href="/reviews/hepatoburn/" class="pick-btn">Read Full Review →</a>
-            </div>
-
-            <!-- CitrusBurn -->
-            <div class="pick-card">
-                <span class="pick-emoji">🍋</span>
-                <div class="stars">★★★★½</div>
-                <div class="pick-name">CitrusBurn</div>
-                <div class="pick-niche">Fat Burning / Natural</div>
-                <div class="pick-desc">Citrus Aurantium and Green Tea Extract work together to trigger thermogenesis —
-                    your body burns more calories even at rest. No stimulant jitters.</div>
-                <div class="pick-meta">
-                    <span class="meta-chip green">60-day guarantee</span>
-                    <span class="meta-chip">$69</span>
-                </div>
-                <a href="/reviews/citruburn/" class="pick-btn">Read Full Review →</a>
-            </div>
-
-        </div>
-
-        <!-- Featured: Mitolyn Deep Dive -->
-        <div class="featured-review">
-            <div>
-                <div class="review-label">🏆 Deep Dive Review</div>
-                <h2 class="review-title">Mitolyn — Our #1 Rated Weight Loss Pick</h2>
-                <blockquote class="review-quote">"I was skeptical after trying dozens of supplements. By week 6, I was
-                    down 11 lbs with more energy than I'd had in years. The difference is the mitochondrial approach —
-                    it's not just water weight."</blockquote>
-                <p style="color:var(--muted);font-size:0.9rem">We've analyzed the ingredients, clinical research, and
-                    customer results. Here's the full breakdown.</p>
-                <a href="affiliate/bridge-pages/mitolyn/index.html" class="review-btn">Read the Full Mitolyn Review
-                    →</a>
-            </div>
-            <div>
-                <div class="review-stats">
-                    <div class="rstat">
-                        <div class="rstat-num">94%</div>
-                        <div class="rstat-label">Customer satisfaction</div>
-                    </div>
-                    <div class="rstat">
-                        <div class="rstat-num">11 lbs</div>
-                        <div class="rstat-label">Avg loss in 6 weeks</div>
-                    </div>
-                    <div class="rstat">
-                        <div class="rstat-num">180</div>
-                        <div class="rstat-label">Day guarantee</div>
-                    </div>
-                </div>
-                <div
-                    style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:12px;padding:20px;margin-top:16px;">
-                    <p style="color:var(--green);font-weight:700;margin-bottom:8px;">✅ Why We Recommend It</p>
-                    <ul
-                        style="color:var(--muted);font-size:0.85rem;padding-left:16px;display:flex;flex-direction:column;gap:6px;">
-                        <li>Science-backed mitochondrial formula</li>
-                        <li>180-day guarantee (industry best)</li>
-                        <li>No stimulants — safe for most adults</li>
-                        <li>Made in FDA-registered US facility</li>
-                    </ul>
+                <div>
+                    <div class="card-price-tag">$9.00</div>
+                    <a href="https://thewellnesscenter.gumroad.com/l/gdpuwz" target="_blank" class="card-action-btn">Get Instant Access →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="divider"></div>
+    <!-- ECOMMERCE BRANDS -->
+    <section class="content-section" id="ecommerce-brands" style="background:#f8fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;">
+        <div class="section-tag">E-Commerce Storefronts</div>
+        <h2 class="section-heading">Official Retail Brands</h2>
+        <p class="section-desc">Shop our active consumer product storefronts with fast US shipping.</p>
 
-    <!-- AMAZON FINDS -->
-    <section class="section" id="amazon">
-        <div class="section-tag">Amazon Partner</div>
-        <h2 class="section-title"><span class="grad">Amazon Health Finds</span> We Actually Use</h2>
-        <p class="section-sub">Products we use daily. Curated for value — no overhyped garbage.</p>
+        <div class="brands-container">
+            <div class="brand-box">
+                <div class="card-category">Tech & Lifestyle</div>
+                <div class="brand-name-heading">LUMORA</div>
+                <p class="card-text">Smart home electronics, activewear, recovery gear, and viral lifestyle accessories.</p>
+                <a href="https://lumoratek.store" target="_blank" class="brand-action-link">Visit Lumora Store →</a>
+            </div>
 
-        <div class="amazon-grid">
-            <div class="amazon-card">
-                <div class="amazon-icon">🌬️</div>
-                <div class="amazon-name">LEVOIT Air Purifier</div>
-                <div class="amazon-price">$99</div>
-                <a href="https://www.amazon.com/dp/B08L73QL1V?tag=jspenda-20" target="_blank" class="amazon-btn">View on
-                    Amazon →</a>
-            </div>
-            <div class="amazon-card">
-                <div class="amazon-icon">💛</div>
-                <div class="amazon-name">Resistance Bands Set</div>
-                <div class="amazon-price">$30</div>
-                <a href="https://www.amazon.com/dp/B01LY0OOFN?tag=jspenda-20" target="_blank" class="amazon-btn">View on
-                    Amazon →</a>
-            </div>
-            <div class="amazon-card">
-                <div class="amazon-icon">👓</div>
-                <div class="amazon-name">Blue Light Glasses</div>
-                <div class="amazon-price">$25</div>
-                <a href="https://www.amazon.com/dp/B00BQ7KBV4?tag=jspenda-20" target="_blank" class="amazon-btn">View on
-                    Amazon →</a>
-            </div>
-            <div class="amazon-card">
-                <div class="amazon-icon">🪥</div>
-                <div class="amazon-name">Oral-B Electric Toothbrush</div>
-                <div class="amazon-price">$49</div>
-                <a href="https://www.amazon.com/dp/B01AKGRTUM?tag=jspenda-20" target="_blank" class="amazon-btn">View on
-                    Amazon →</a>
-            </div>
-            <div class="amazon-card">
-                <div class="amazon-icon">💪</div>
-                <div class="amazon-name">ON Gold Standard Whey</div>
-                <div class="amazon-price">$57</div>
-                <a href="https://www.amazon.com/dp/B000QSNYGI?tag=jspenda-20" target="_blank" class="amazon-btn">View on
-                    Amazon →</a>
+            <div class="brand-box">
+                <div class="card-category">Boutique Apparel</div>
+                <div class="brand-name-heading">VELORA</div>
+                <p class="card-text">Trending women's fashion, matching 2-piece sets, dresses, and boutique denim apparel.</p>
+                <a href="https://veloraze.com" target="_blank" class="brand-action-link" style="background:#db2777;">Visit Velora Boutique →</a>
             </div>
         </div>
     </section>
 
-    <div class="divider"></div>
+    <!-- AMAZON VERIFIED TECH -->
+    <section class="content-section" id="amazon-tech">
+        <div class="section-tag">Amazon Verified Partner</div>
+        <h2 class="section-heading">Curated Amazon Workspace Tech</h2>
+        <p class="section-desc">Tested high-performance products verified with live Amazon availability.</p>
 
-    <!-- EMAIL CAPTURE -->
-    <div class="section" id="newsletter">
-        <div class="email-section">
-            <div class="section-tag">Free Newsletter</div>
-            <h2>Get Our Best Picks<br>Straight to Your Inbox</h2>
-            <p>Weekly newsletter: new supplement reviews, Amazon deals, coupon codes, and exclusive offers. Free, no
-                spam, unsubscribe anytime.</p>
-            <div class="email-form">
-                <input type="email" class="email-input" placeholder="your@email.com" id="emailInput">
-                <button class="email-btn" onclick="subscribe()">Subscribe Free →</button>
-            </div>
-            <p class="email-fine">Join free. Unsubscribe anytime. We never sell your email.</p>
-        </div>
-    </div>
-
-    <!-- GUIDES SECTION -->
-    <section class="section" id="guides">
-        <div class="section-tag">Digital Products</div>
-        <h2 class="section-title">Go Deeper with Our <span class="grad">Premium Guides</span></h2>
-        <p class="section-sub">Step-by-step playbooks for building income with AI, affiliates, and digital products.</p>
-
-        <div class="guides-strip">
-            <div class="guide-card">
-                <div class="guide-icon">🤖</div>
+        <div class="cards-grid">
+            <div class="item-card amazon-card">
                 <div>
-                    <div class="guide-name">AI Money Machine 2026</div>
-                    <div class="guide-sub">73 pages — AI agents, ChatGPT, N8N automation, multiple income streams</div>
-                    <div class="guide-price"><span class="guide-price-old">$49.99</span><span
-                            class="guide-price-new">$29.99</span></div>
-                    <a href="mailto:contact@wingsexpressllc.com?subject=AI%20Money%20Machine%202026%20Guide" class="guide-btn">Get Instant Access</a>
+                    <div class="card-category">Air Quality</div>
+                    <div class="card-name">LEVOIT Core 300 Air Purifier</div>
+                    <div class="card-text">True HEPA filtration for home office & living spaces. Ultra-quiet operation.</div>
+                </div>
+                <div>
+                    <a href="https://www.amazon.com/dp/B07VVK39F7?tag=wingsexpress2-20" target="_blank" class="card-action-btn">View on Amazon →</a>
                 </div>
             </div>
-            <div class="guide-card">
-                <div class="guide-icon">💰</div>
+
+            <div class="item-card amazon-card">
                 <div>
-                    <div class="guide-name">Affiliate Marketing Mastery</div>
-                    <div class="guide-sub">76 pages — $10K–$50K/month blueprint, traffic, conversion strategies</div>
-                    <div class="guide-price"><span class="guide-price-old">$49.99</span><span
-                            class="guide-price-new">$29.99</span></div>
-                    <a href="mailto:contact@wingsexpressllc.com?subject=Affiliate%20Marketing%20Mastery%20Guide" class="guide-btn">Get Instant Access</a>
+                    <div class="card-category">Portable Power</div>
+                    <div class="card-name">Anker Magnetic Power Bank</div>
+                    <div class="card-text">Fast wireless magnetic portable charger for Apple iPhone & Android devices.</div>
+                </div>
+                <div>
+                    <a href="https://www.amazon.com/dp/B07PXMF52C?tag=wingsexpress2-20" target="_blank" class="card-action-btn">View on Amazon →</a>
                 </div>
             </div>
-            <div class="guide-card">
-                <div class="guide-icon">📦</div>
+
+            <div class="item-card amazon-card">
                 <div>
-                    <div class="guide-name">AI Digital Profit Blueprint</div>
-                    <div class="guide-sub">76 pages — eBooks, Shopify, Etsy, Gumroad, zero to $5K/month</div>
-                    <div class="guide-price"><span class="guide-price-old">$49.99</span><span
-                            class="guide-price-new">$29.99</span></div>
-                    <a href="mailto:contact@wingsexpressllc.com?subject=AI%20Digital%20Profit%20Blueprint" class="guide-btn">Get Instant Access</a>
+                    <div class="card-category">Workstation</div>
+                    <div class="card-name">Logitech MX Master 3S Mouse</div>
+                    <div class="card-text">Ergonomic wireless performance mouse designed for productivity & developers.</div>
+                </div>
+                <div>
+                    <a href="https://www.amazon.com/dp/B07Y8883PK?tag=wingsexpress2-20" target="_blank" class="card-action-btn">View on Amazon →</a>
+                </div>
+            </div>
+
+            <div class="item-card amazon-card">
+                <div>
+                    <div class="card-category">Wireless Audio</div>
+                    <div class="card-name">Apple AirPods Pro 2</div>
+                    <div class="card-text">Noise-cancelling wireless earbuds with MagSafe USB-C charging case.</div>
+                </div>
+                <div>
+                    <a href="https://www.amazon.com/dp/B0CHWRXMVK?tag=wingsexpress2-20" target="_blank" class="card-action-btn">View on Amazon →</a>
                 </div>
             </div>
         </div>
@@ -1084,75 +582,38 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-inner">
-            <div class="footer-brand">
-                <span class="logo">Wings Express</span>
-                <p>Honest health reviews and wellness resources since 2024.</p>
+            <div>
+                <div class="logo-text" style="color:#fff;margin-bottom:12px;">WINGS EXPRESS <span style="color:#60a5fa;">LLC</span></div>
+                <p style="font-size:0.85rem;line-height:1.5;">Corporate directory and digital holdings.<br>4086 Dombard Ln, Saint Louis, MO 63134</p>
             </div>
             <div>
-                <h5>Top Picks</h5>
-                <a href="/reviews/mitolyn/">Mitolyn Review</a>
-                <a href="/reviews/javaburn/">Java Burn Review</a>
-                <a href="/reviews/prodentim/">ProDentim Review</a>
-                <a href="/reviews/sugardefender/">Sugar Defender</a>
+                <div class="footer-col-title">Digital Blueprints</div>
+                <ul class="footer-menu">
+                    <li><a href="https://thewellnesscenter.gumroad.com/l/bfypew" target="_blank">$50K Business Credit Blueprint</a></li>
+                    <li><a href="https://thewellnesscenter.gumroad.com/l/xstyg" target="_blank">48-Hour Faceless Playbook</a></li>
+                    <li><a href="https://thewellnesscenter.gumroad.com/l/jxlncf" target="_blank">200+ AI Prompt Pack</a></li>
+                    <li><a href="https://thewellnesscenter.gumroad.com/l/gdpuwz" target="_blank">$1K Side Hustle Kit</a></li>
+                </ul>
             </div>
             <div>
-                <h5>Amazon</h5>
-                <a href="https://www.amazon.com/dp/B08L73QL1V?tag=jspenda-20" target="_blank">Air Purifier</a>
-                <a href="https://www.amazon.com/dp/B00BQ7KBV4?tag=jspenda-20" target="_blank">Blue Light Glasses</a>
-                <a href="https://www.amazon.com/dp/B01AKGRTUM?tag=jspenda-20" target="_blank">Electric Toothbrush</a>
+                <div class="footer-col-title">Storefronts</div>
+                <ul class="footer-menu">
+                    <li><a href="https://lumoratek.store" target="_blank">Lumora Store</a></li>
+                    <li><a href="https://veloraze.com" target="_blank">Velora Boutique</a></li>
+                </ul>
             </div>
             <div>
-                <h5>Company</h5>
-                <a href="https://www.tiktok.com/@poppaeza" target="_blank">TikTok</a>
-                <a href="https://t.me/Wingsexpressbot" target="_blank">Telegram Bot</a>
-                <a href="mailto:contact@wingsexpressllc.com">Contact</a>
-                <a href="#guides">Guides</a>
+                <div class="footer-col-title">Contact</div>
+                <ul class="footer-menu">
+                    <li><a href="mailto:contracts@wingsexpressllc.com">contracts@wingsexpressllc.com</a></li>
+                </ul>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 Wings Express LLC. All rights reserved.</p>
-            <p class="disclaimer">Affiliate Disclosure: Wings Express participates in affiliate marketing programs
-                including Amazon Associates and ClickBank. We may earn commissions on purchases made through our links
-                at no extra cost to you. Results vary. Health products are not intended to diagnose, treat, cure, or
-                prevent any disease. Always consult a healthcare professional. Amazon and the Amazon logo are trademarks
-                of Amazon.com, Inc.</p>
+        <div class="footer-bottom-text">
+            <p>© 2026 WINGS EXPRESS LLC. All rights reserved. CAGE 9UWD0 | UEI ZTJ3XTKDWCC7.</p>
+            <p style="margin-top:6px;font-size:0.78rem;color:#64748b;">Affiliate Disclosure: WINGS EXPRESS LLC participates in affiliate marketing programs including Amazon Associates (Tag: wingsexpress2-20) and Gumroad. We earn qualifying commissions on purchases made through our links.</p>
         </div>
     </footer>
 
-    <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-            });
-        });
-
-        // Subscribe
-        function subscribe() {
-            const email = document.getElementById('emailInput').value;
-            if (!email || !email.includes('@')) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            document.getElementById('emailInput').value = '';
-            const btn = document.querySelector('.email-btn');
-            btn.textContent = '✅ Subscribed!';
-            btn.style.background = '#10b981';
-            setTimeout(() => {
-                btn.textContent = 'Subscribe Free →';
-                btn.style.background = '';
-            }, 3000);
-            // TODO: Connect to email provider (Mailchimp, ConvertKit, etc.)
-            console.log('Subscribe:', email);
-        }
-
-        // Nav scroll effect
-        window.addEventListener('scroll', () => {
-            document.querySelector('nav').style.boxShadow = window.scrollY > 50
-                ? '0 4px 30px rgba(0,0,0,0.5)' : 'none';
-        });
-    </script>
 </body>
-
 </html>
